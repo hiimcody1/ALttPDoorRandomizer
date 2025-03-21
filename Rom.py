@@ -583,7 +583,7 @@ def patch_rom(world, rom, player, team, is_mystery=False):
     dr_flags |= DROptions.DarkWorld_Spawns  # no longer experimental
     if world.logic[player] not in ['owglitches', 'hybridglitches', 'nologic']:
         dr_flags |= DROptions.Fix_EG
-    if world.door_type_mode[player] in ['big', 'all', 'chaos']:
+    if world.door_type_mode[player] in ['big', 'all', 'chaos'] and world.doorShuffle[player] != 'vanilla':
         dr_flags |= DROptions.BigKeyDoor_Shuffle
     if world.dropshuffle[player] in ['underworld']:
         dr_flags |= DROptions.EnemyDropIndicator
