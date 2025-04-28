@@ -1,6 +1,7 @@
 # Patch Notes
 
 * 1.4.9
+  * Attempted fix for Moth conveyor room timing. THank for many people's input. Unsure if Helmacopter is still acceptable. 
   * Mirror scroll will show up on file start screen if enabled (thanks Clearmouse!)
   * Fixes for HMG by Muffins
   * Various fixes for Enemizer by Codemann (gfx fixes, more randomization options)
