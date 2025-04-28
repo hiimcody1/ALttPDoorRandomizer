@@ -6,4 +6,5 @@
   * Fixes for HMG by Muffins
   * Various fixes for Enemizer by Codemann (gfx fixes, more randomization options)
   * Vanilla door shuffle prevents big key doors changes from door_type_mode
+  * Couple of minor fixes to custom generation. Deals with a complete specification of all dungeons
   * Various enemizer bans for blocked paths (thanks to all the reports, Q1 2025)
