@@ -1,73 +1,78 @@
-(Note: these will be moving to PastReleaseNotes.md)
-
-# Feature Notes
+# Past Feature Notes
 
 1.4.3: File Select/End Game screen: Mirror Scroll and Pseudoboots added (Thanks Hiimcody!)
-
 
 # Patch Notes
 
 Changelog archive
 
+* 1.4.9
+    * Attempted fix for Moth conveyor room timing. Thanks for many people's input. Unsure if Helmacopter is still acceptable.
+    * Mirror scroll will show up on file start screen if enabled (thanks Clearmouse!)
+    * Fixes for HMG by Muffins
+    * Various fixes for Enemizer by Codemann (gfx fixes, more randomization options)
+    * Vanilla door shuffle prevents big key doors changes from door_type_mode
+    * Couple of minor fixes to custom generation. Deals with a complete specification of all dungeons
+    * Various enemizer bans for blocked paths (thanks to all the reports, Q1 2025)
 * 1.4.8.1
-  - Fixed broken doors generation
-  - Fixed bomb/arrow upgrade ignoring custom pricing
-  - Extended `money_balance` to apply to price balancing for non-custom shops.
+    - Fixed broken doors generation
+    - Fixed bomb/arrow upgrade ignoring custom pricing
+    - Extended `money_balance` to apply to price balancing for non-custom shops.
 * 1.4.8
-  - New option: Mirror Scroll - to add the item to the starting inventory in non-doors modes (Thanks Telethar!)
-  - Customizer: Ability to customize shop prices and control money balancing. `money_balance` is a percentage betwen 0 and 100 that attempts to ensure you have that much percentage of money available for purchases. (100 is default, 0 essentially ignores money considerations)
-  - Fixed a key logic bug with decoupled doors when a big key door leads to a small key door (the small key door was missing appropriate logic)
-  - Fixed an ER bug where Bonk Fairy could be used for a mandatory connector in standard mode (boots could allow escape to be skipped)
-  - Fixed an issue with flute activation in rain mode. (thanks Codemann!)
-  - Fixed an issue with enemies in TR Dark Ride room not requiring Somaria. (Refactored the room for decoupled logic better)
-  - More HMG fixes by Muffins
-  - Fixed an issue with multi-player HMG
-  - Fixed an issue limiting number of items specified in the item pool on the GUI
-  - Minor documentation fixes (thanks Codemann!)
+    - New option: Mirror Scroll - to add the item to the starting inventory in non-doors modes (Thanks Telethar!)
+    - Customizer: Ability to customize shop prices and control money balancing. `money_balance` is a percentage betwen 0 and 100 that attempts to ensure you have that much percentage of money available for purchases. (100 is default, 0 essentially ignores money considerations)
+    - Fixed a key logic bug with decoupled doors when a big key door leads to a small key door (the small key door was missing appropriate logic)
+    - Fixed an ER bug where Bonk Fairy could be used for a mandatory connector in standard mode (boots could allow escape to be skipped)
+    - Fixed an issue with flute activation in rain mode. (thanks Codemann!)
+    - Fixed an issue with enemies in TR Dark Ride room not requiring Somaria. (Refactored the room for decoupled logic better)
+    - More HMG fixes by Muffins
+    - Fixed an issue with multi-player HMG
+    - Fixed an issue limiting number of items specified in the item pool on the GUI
+    - Minor documentation fixes (thanks Codemann!)
 * 1.4.7.2
-  - Fixed an issue with shuffle_ganon/fix_gtower_exit causing a generation failure
-  - More HMG fixes by Muffins
+    - Fixed an issue with shuffle_ganon/fix_gtower_exit causing a generation failure
+    - More HMG fixes by Muffins
 * 1.4.7.1
-  - Fixed an issue with the repaired "beemizer" setting not being backwards compatible
+    - Fixed an issue with the repaired "beemizer" setting not being backwards compatible
 * 1.4.7
-  - Fixed generation error with Big Key in starting inventory (thanks Cody!)
-  - HMG/NL logic fixes by Muffins
-  - Enemizer: Disabled Walking Zora in the UW due to crash with Swamola (they ignore a lot of collison anyway)
-  - Enemizer: Fixed an issue with enemizer bush sprites
-  - Enemizer: Banned new Mimics from being the randomized bush sprite due to crash
-  - "Beatable" or "accessibility: none" can now use randomized trap doors to seal off entire parts of dungeons (was intended, bug prevented the logic skip)
-  - Logic error with enemizer and standard should use new enemy logic rules
-  - Fixed a bug with the inconsistent treatment of the beemizer setting
-  - Fixed an issue with returning Blacksmith in Simple shuffle (when blacksmith is at Link's House)
-  - Fixed an issue with dark sanctuary spawn at tavern north door (thanks Codemann!)
-  - Various enemy bans for the last few months
+    - Fixed generation error with Big Key in starting inventory (thanks Cody!)
+    - HMG/NL logic fixes by Muffins
+    - Enemizer: Disabled Walking Zora in the UW due to crash with Swamola (they ignore a lot of collison anyway)
+    - Enemizer: Fixed an issue with enemizer bush sprites
+    - Enemizer: Banned new Mimics from being the randomized bush sprite due to crash
+    - "Beatable" or "accessibility: none" can now use randomized trap doors to seal off entire parts of dungeons (was intended, bug prevented the logic skip)
+    - Logic error with enemizer and standard should use new enemy logic rules
+    - Fixed a bug with the inconsistent treatment of the beemizer setting
+    - Fixed an issue with returning Blacksmith in Simple shuffle (when blacksmith is at Link's House)
+    - Fixed an issue with dark sanctuary spawn at tavern north door (thanks Codemann!)
+    - Various enemy bans for the last few months
 * 1.4.6
-  - Restores original Sanc & Quit behavior, if Aga1 is not dead, then no quick pyramid warp
-  - Fixed problem with Lite/Lean shuffling some fairy caves unnecessarily
-  - The 300 Rupees item is now marked as priority, so it will not be used as GT junk fill (this matches a change in the VT randomizer)
-  - Murahdahla is now logically accessible in inverted mode as a bunny. May affect some beatable-only TFH seeds by allowing Moon Pearl to be inaccessible.
-  - Fixed an issue around PreferredLocationGroups in customizer which would not work with pre-activated Ocraina or priority items.
-  - Minor fix on triforce text
-  - Enemy bans for poor placements
+    - Restores original Sanc & Quit behavior, if Aga1 is not dead, then no quick pyramid warp
+    - Fixed problem with Lite/Lean shuffling some fairy caves unnecessarily
+    - The 300 Rupees item is now marked as priority, so it will not be used as GT junk fill (this matches a change in the VT randomizer)
+    - Murahdahla is now logically accessible in inverted mode as a bunny. May affect some beatable-only TFH seeds by allowing Moon Pearl to be inaccessible.
+    - Fixed an issue around PreferredLocationGroups in customizer which would not work with pre-activated Ocraina or priority items.
+    - Minor fix on triforce text
+    - Enemy bans for poor placements
 * 1.4.5
-  - Logic: Added appropriate enemy logic to GT Mimics 1 and 2 rooms
-  - Logic: Added appropriate enemy logic to Mire 2 room. Note this does change the default logical strats, due to how enemy kill logic works.
-    - Ice Rod + 1 Bomb is now out of logic
-    - Fire Rod + 1 Bomb is now out of logic
-    - Fire Rod + 1 magic extension is still in logic
-    - Byrna + 1 magic extension is newly in logic
+    - Logic: Added appropriate enemy logic to GT Mimics 1 and 2 rooms
+    - Logic: Added appropriate enemy logic to Mire 2 room. Note this does change the default logical strats, due to how enemy kill logic works.
+        - Ice Rod + 1 Bomb is now out of logic
+        - Fire Rod + 1 Bomb is now out of logic
+        - Fire Rod + 1 magic extension is still in logic
+        - Byrna + 1 magic extension is newly in logic
 
-    (One magic extension is either half magic or a bottle with the ability to purchase a blue or green potion) In general, making up for a lack of magic extension with a few bombs is something that could be added to the logic. Using the ice rod to freeze an enemy and then using that enemy to deal blunt damage and then using bombs to clear the frozen enemy is another strategy that could be added to the logic someday. If these are important to you, let me know.
-  - Generation: Fixed an issue with dungeonsfull shuffle
+      (One magic extension is either half magic or a bottle with the ability to purchase a blue or green potion) In general, making up for a lack of magic extension with a few bombs is something that could be added to the logic. Using the ice rod to freeze an enemy and then using that enemy to deal blunt damage and then using bombs to clear the frozen enemy is another strategy that could be added to the logic someday. If these are important to you, let me know.
+    - Generation: Fixed an issue with dungeonsfull shuffle
 * 1.4.4
-  - Fixed a crash near the end of the credits when total collection rate was over 1000
+    - Fixed a crash near the end of the credits when total collection rate was over 1000
 * 1.4.3
-  * Key Logic Algorithm: Renamed "Default" to "Dangerous" to indicate the potential soft-lock issues
-  * Hera Basement Cage: Fix for small key counting multiple times (again)
-  * Generation: Fixed several generation problems with ER and intensity 3
-  * Customizer: Generation bug when attempting to place small keys
-  * Hints: Updated pedestal/tablet text to be more clear
-  * Enemizer: Various enemy bans
+    * Key Logic Algorithm: Renamed "Default" to "Dangerous" to indicate the potential soft-lock issues
+    * Hera Basement Cage: Fix for small key counting multiple times (again)
+    * Generation: Fixed several generation problems with ER and intensity 3
+    * Customizer: Generation bug when attempting to place small keys
+    * Hints: Updated pedestal/tablet text to be more clear
+    * Enemizer: Various enemy bans
 * 1.4.2
     * New ER Options:
         * [Skull Woods shuffle options](#skull-woods-shuffle)
