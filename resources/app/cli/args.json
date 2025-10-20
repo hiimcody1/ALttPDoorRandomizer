@@ -549,5 +549,6 @@
   },
   "outputname": {},
   "notes": {},
-  "code": {}
+  "code": {},
+  "rom_header" : {}
 }

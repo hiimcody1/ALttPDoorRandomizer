@@ -414,7 +414,7 @@ def handle_native_dungeon(location, itemid):
     return itemid
 
 
-def patch_rom(world, rom, player, team, is_mystery=False):
+def patch_rom(world, rom, player, team, is_mystery=False, rom_header=None):
     random.seed(world.rom_seeds[player])
 
     # progressive bow silver arrow hint hack
@@ -1433,8 +1433,14 @@ def patch_rom(world, rom, player, team, is_mystery=False):
     # set rom name
     # 21 bytes
     from Main import __version__
-    seedstring = f'{world.seed:09}' if isinstance(world.seed, int) else world.seed
-    rom.name = bytearray(f'DR{__version__.split("-")[0].replace(".","")[0:3]}_{team+1}_{player}_{seedstring}\0', 'utf8')[:21]
+    if rom_header:
+        if len(rom_header) > 21:
+            raise Exception('ROM header too long. Max 21 bytes, found %d bytes.' % len(rom_header))
+        rom.name = bytearray(rom_header, 'utf8')[:21]
+    else:
+        seedstring = f'{world.seed:09}' if isinstance(world.seed, int) else world.seed
+        rom.name = bytearray(f'DR{__version__.split("-")[0].replace(".","")[0:3]}_{team+1}_{player}_{seedstring}\0', 'utf8')[:21]
+
     rom.name.extend([0] * (21 - len(rom.name)))
     rom.write_bytes(0x7FC0, rom.name)
 
